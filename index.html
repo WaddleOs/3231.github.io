@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaş Analiz Uygulaması</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Yaş Analiz Sistemi</h1>
+    <form id="ageForm">
+      <label for="age">Yaşınızı giriniz:</label>
+      <input type="number" id="age" name="age" min="1" max="100" required>
+      <button type="submit">Gönder</button>
+    </form>
+
+    <div id="result" style="display:none;">
+      <h2>Yaş Dağılımı</h2>
+      <ul>
+        <li>8-12 Yaş: <span id="age8to12">0</span></li>
+        <li>12-14 Yaş: <span id="age12to14">0</span></li>
+        <li>14-16 Yaş: <span id="age14to16">0</span></li>
+        <li>16-18 Yaş: <span id="age16to18">0</span></li>
+        <li>20+ Yaş: <span id="age20plus">0</span></li>
+      </ul>
+      <p id="totalCount">Toplam Kişi Sayısı: 0</p>
+    </div>
+
+    <button id="resetBtn" style="display:none;" onclick="resetForm()">Yeniden Başlat</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
